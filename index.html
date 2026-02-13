@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Precision Plants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Precision Plants</h1>
+        <p>Your smart gardening partner</p>
+    </header>
+
+    <section id="plant-container">
+        <!-- Data from JSON will load here -->
+    </section>
+
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('plant-container');
+
+                data.plants.forEach(plant => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h2>${plant.name}</h2>
+                        <p>🌱 Type: ${plant.type}</p>
+                        <p>💧 Water: ${plant.water}</p>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+    </script>
+
+</body>
+</html>
