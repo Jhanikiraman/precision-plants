@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "name": "Rose",
+      "type": "Flower",
+      "water": "Daily"
+    },
+    {
+      "name": "Aloe Vera",
+      "type": "Succulent",
+      "water": "Twice a week"
+    },
+    {
+      "name": "Tulsi",
+      "type": "Herb",
+      "water": "Daily"
+    }
+  ]
+}
