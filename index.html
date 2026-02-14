@@ -1,39 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Precision Plants</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>NovaTech</title>
 </head>
-<body>
 
-    <header>
-        <h1>🌿 Precision Plants</h1>
-        <p>Your smart gardening partner</p>
-    </header>
+<body style="
+margin:0;
+padding:0;
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+">
 
-    <section id="plant-container">
-        <!-- Data from JSON will load here -->
-    </section>
+<!-- NAVIGATION -->
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+">
 
-    <script>
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('plant-container');
+<h2 style="color:#00f2fe;">NovaTech</h2>
 
-                data.plants.forEach(plant => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <h2>${plant.name}</h2>
-                        <p>🌱 Type: ${plant.type}</p>
-                        <p>💧 Water: ${plant.water}</p>
-                    `;
-                    container.appendChild(card);
-                });
-            });
-    </script>
+<div>
+<a href="#" style="color:white;margin-left:20px;text-decoration:none;">Home</a>
+<a href="#" style="color:white;margin-left:20px;text-decoration:none;">Features</a>
+<a href="#" style="color:white;margin-left:20px;text-decoration:none;">About</a>
+<a href="#" style="color:white;margin-left:20px;text-decoration:none;">Contact</a>
+</div>
+</div>
+
+<!-- HERO SECTION -->
+<div style="text-align:center;padding:120px 20px;">
+<h1 style="font-size:48px;margin-bottom:15px;">Build The Future With Us</h1>
+<p style="font-size:20px;margin-bottom:25px;">Innovative Cloud & DevOps Solutions</p>
+
+<button onclick="showMessage()" style="
+padding:12px 30px;
+border:none;
+background:linear-gradient(45deg,#00f2fe,#4facfe);
+color:white;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+">
+Get Started
+</button>
+</div>
+
+<!-- FEATURES -->
+<div style="
+display:flex;
+justify-content:center;
+gap:30px;
+padding:50px;
+flex-wrap:wrap;
+">
+
+<div style="
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+width:250px;
+text-align:center;
+backdrop-filter:blur(10px);
+">
+<h3>Cloud Ready</h3>
+<p>Deploy scalable apps on AWS with automation.</p>
+</div>
+
+<div style="
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+width:250px;
+text-align:center;
+backdrop-filter:blur(10px);
+">
+<h3>Secure</h3>
+<p>Industry-grade security & IAM best practices.</p>
+</div>
+
+<div style="
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+width:250px;
+text-align:center;
+backdrop-filter:blur(10px);
+">
+<h3>Fast Delivery</h3>
+<p>CI/CD pipelines for rapid deployments.</p>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.3);
+">
+© 2026 NovaTech. All Rights Reserved.
+</div>
+
+<script>
+function showMessage(){
+  alert("Welcome to NovaTech 🚀 Let's build something amazing!");
+}
+</script>
 
 </body>
 </html>
